@@ -41,9 +41,7 @@
 // enum Color { Red, Green, Blue }
 // let c: Color = Color.Red;
 
-// let tuple: [string, number, boolean] = ["Alex", 33, true];
-// console.log("\nДополнительные элементы:");
-// console.log({ c, tuple });
+
 
 let initData: number[] = [];
 let results: number[] = [];
