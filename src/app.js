@@ -25,26 +25,29 @@
 // console.log("После сортировки:", numbers);
 // enum Color { Red, Green, Blue }
 // let c: Color = Color.Red;
-// let tuple: [string, number, boolean] = ["Alex", 33, true];
-// console.log("\nДополнительные элементы:");
-// console.log({ c, tuple });
-var initData = [];
-var results = [];
-for (var i = 0; i <= 100; i++) {
-    initData.push(i);
+// let initData: number[] = [];
+// let results: number[] = [];
+// for(let i:number = 0; i<= 100; i++){
+//         initData.push(i);
+// }
+// console.log(initData);
+// for(let i:number = 0; i<= initData.length; i++){
+//     let doub:number = initData[i] + 1; 
+//     if(doub % 2 ){
+//         results.push(doub)
+//     }
+// }
+// console.log(results)
+// let square: number[] = [];
+// for(let res of results){
+//     square.push(Math.sqrt(res));
+// }
+// const numberFilter = square.filter( num => num >7)
+// console.log(numberFilter)
+function findElement(arr, target) {
+    return arr.indexOf(target);
 }
-console.log(initData);
-for (var i = 0; i <= initData.length; i++) {
-    var doub = initData[i] + 1;
-    if (doub % 2) {
-        results.push(doub);
-    }
-}
-console.log(results);
-var square = [];
-for (var _i = 0, results_1 = results; _i < results_1.length; _i++) {
-    var res = results_1[_i];
-    square.push(Math.sqrt(res));
-}
-var numberFilter = square.filter(function (num) { return num > 7; });
-console.log(numberFilter);
+var numbers = [1, 2, 3, 4, 5];
+var target = 3;
+var index = findElement(numbers, target);
+console.log("\u0418\u043D\u0434\u0435\u043A\u0441 \u044D\u043B\u0435\u043C\u0435\u043D\u0442\u0430 ".concat(target, " \u0432 \u043C\u0430\u0441\u0441\u0438\u0432\u0435: ").concat(index));

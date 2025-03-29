@@ -43,28 +43,50 @@
 
 
 
-let initData: number[] = [];
-let results: number[] = [];
+// let initData: number[] = [];
+// let results: number[] = [];
 
-for(let i:number = 0; i<= 100; i++){
-        initData.push(i);
+// for(let i:number = 0; i<= 100; i++){
+//         initData.push(i);
 
-}
-console.log(initData);
+// }
+// console.log(initData);
 
-for(let i:number = 0; i<= initData.length; i++){
-    let doub:number = initData[i] + 1; 
-    if(doub % 2 ){
-        results.push(doub)
-    }
-}
-console.log(results)
+// for(let i:number = 0; i<= initData.length; i++){
+//     let doub:number = initData[i] + 1; 
+//     if(doub % 2 ){
+//         results.push(doub)
+//     }
+// }
+// console.log(results)
 
-let square: number[] = [];
-for(let res of results){
+// let square: number[] = [];
+// for(let res of results){
     
     
-    square.push(Math.sqrt(res));
+//     square.push(Math.sqrt(res));
+// }
+// const numberFilter = square.filter( num => num >7)
+// console.log(numberFilter)
+
+
+
+function findElement<T> (arr: T[], target: T){
+          return  arr.indexOf(target) 
 }
-const numberFilter = square.filter( num => num >7)
-console.log(numberFilter)
+
+const numbers = [1, 2, 3, 4, 5];
+const target = 3;
+const index = findElement(numbers, target);
+console.log(`Индекс элемента ${target} в массиве: ${index}`);
+
+
+
+function mergeObjects<T extends object, U extends object>(obj1: T, obj2: U): T & U {
+    return { ...obj1, ...obj2 };
+}
+
+const person1 = { name: 'Alice', age: 30 };
+const person2 = { age: 25, city: 'New York' };
+const mergedPerson = mergeObjects(person1, person2);
+console.log(mergedPerson); 

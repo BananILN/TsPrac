@@ -26,13 +26,31 @@
 // console.log("После сортировки:", numbers);
 // enum Color { Red, Green, Blue }
 // let c: Color = Color.Red;
-// let tuple: [string, number, boolean] = ["Alex", 33, true];
-// console.log("\nДополнительные элементы:");
-// console.log({ c, tuple });
-let initData = [];
-let results = [];
-for (let i = 0; i <= 100; i++) {
-    initData.push(i);
-    console.log(i);
+// let initData: number[] = [];
+// let results: number[] = [];
+// for(let i:number = 0; i<= 100; i++){
+//         initData.push(i);
+// }
+// console.log(initData);
+// for(let i:number = 0; i<= initData.length; i++){
+//     let doub:number = initData[i] + 1; 
+//     if(doub % 2 ){
+//         results.push(doub)
+//     }
+// }
+// console.log(results)
+// let square: number[] = [];
+// for(let res of results){
+//     square.push(Math.sqrt(res));
+// }
+// const numberFilter = square.filter( num => num >7)
+// console.log(numberFilter)
+function findElement(arr, target) {
+    arr.forEach((item) => {
+        arr.indexOf(target) ? null : -1;
+    });
 }
-console.log(initData);
+const numbers = [1, 2, 3, 4, 5];
+const target = 3;
+const index = findElement(numbers, target);
+console.log(`Индекс элемента ${target} в массиве: ${index}`);
